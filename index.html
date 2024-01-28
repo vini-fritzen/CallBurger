@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hambúrguer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Hambúrguer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <!-- Adicione mais links de navegação, se necessário -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calculator">
+            <h2>Calculadora</h2>
+            <div class="quantidade">
+                <label for="quantity">Quantidade de Pessoas:</label>
+                <input type="number" id="quantity" min="1" value="1">
+
+                <label for="burgerWeight">Peso do Hambúrguer (g):</label>
+                <input type="number" id="burgerWeight" step="1" min="1" value="100">
+
+                <label for="fatPercentage">Porcentagem de Gordura no Hambúrguer (%):</label>
+                <input type="number" id="fatPercentage" step="1" min="0" max="100" value="20">
+            </div>
+            </section>
+
+            <h2>Selecione os Ingredientes</h2>
+            <section id="legumes">
+                <h3>Legumes</h3>
+                <div class="category">
+                    <label><input type="checkbox" name="ingredient" value="alface"> Alface</label>
+                    <label><input type="checkbox" name="ingredient" value="tomate"> Tomate</label>
+                    <label><input type="checkbox" name="ingredient" value="picles"> Picles</label>
+                    <label><input type="checkbox" name="ingredient" value="cebola"> Cebola</label>
+                    <label><input type="checkbox" name="ingredient" value="pepino"> Pepino</label>
+                    <label><input type="checkbox" name="ingredient" value="pimentao"> Pimentão</label>
+                    <label><input type="checkbox" name="ingredient" value="rucula"> Rúcula</label>
+                    <label><input type="checkbox" name="ingredient" value="tomate_seco"> Tomate Seco</label>
+                </div>
+            </section>
+
+            <section id="queijos">
+                <h3>Queijos</h3>
+                <div class="category">
+                    <label><input type="checkbox" name="ingredient" value="cheddar"> Queijo Cheddar</label>
+                    <label><input type="checkbox" name="ingredient" value="suico"> Queijo Suíço</label>
+                    <label><input type="checkbox" name="ingredient" value="americano"> Queijo Americano</label>
+                    <label><input type="checkbox" name="ingredient" value="gorgonzola"> Queijo Gorgonzola, Roquefort ou Azul</label>
+                    <label><input type="checkbox" name="ingredient" value="pepper_jack"> Queijo Pepper Jack</label>
+                    <label><input type="checkbox" name="ingredient" value="provolone"> Queijo Provolone</label>
+                    <label><input type="checkbox" name="ingredient" value="brie"> Queijo Brie</label>
+                    <label><input type="checkbox" name="ingredient" value="gouda"> Queijo Gouda</label>
+                </div>
+            </section>
+            
+            <section id="extras">
+                <h3>Extras</h3>
+                <div class="category">
+                    <label><input type="checkbox" name="ingredient" value="bacon"> Bacon</label>
+                    <label><input type="checkbox" name="ingredient" value="ovo"> Ovo</label>
+                </div>
+            </section>
+            <button onclick="calculateTotal()">Calcular</button>
+
+            <h3>Quantidades:</h3>
+            <ul id="quantities-list"></ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Calculadora de Hambúrguer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

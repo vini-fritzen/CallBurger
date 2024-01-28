@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+nav li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+main h3 {
+    padding: 0px 50px;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 40px;
+}
+
+.category label {
+    flex-basis: 25%;
+    box-sizing: border-box;
+}
+
+.quantidade{
+    display: flex;
+    flex-flow: column;
+    padding: 0px 40px;
+}
+.quantidade label {
+    font-size: 18px;
+    font-weight: 500;
+}
+.quantidade input {
+    width: 150px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #414141;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+
+#calculator {
+    background-color: #f0f0f0;
+    padding: 0px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 15px 15px;
+}
