@@ -28,6 +28,10 @@ nav li a {
     text-decoration: none;
 }
 
+main h2{
+    padding: 0px 25px;
+}
+
 main h3 {
     padding: 0px 50px;
 }
