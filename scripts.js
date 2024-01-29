@@ -1,29 +1,13 @@
 function calculateTotal() {
-    const quantity = parseFloat(document.getElementById('quantity').value);
-    const burgerWeight = parseFloat(document.getElementById('burgerWeight').value);
-    const fatPercentage = parseFloat(document.getElementById('fatPercentage').value);
-    const ingredients = document.getElementsByName('ingredient');
+    const quantity = document.getElementById('quantity').value;
+    const burgerWeight = document.getElementById('burgerWeight').value;
+    const fatPercentage = document.getElementById('fatPercentage').value;
 
-    let totalBread = 0;
-    let totalMeat = 0;
+    // Chamar a função calcularIngredientes e obter os resultados
+    const resultados = calcularIngredientes(quantity, burgerWeight, fatPercentage);
 
-    ingredients.forEach(ingredient => {
-        if (ingredient.checked) {
-            const isMeat = (ingredient.value === 'carne');
-            const totalWeight = isMeat ? quantity * burgerWeight * 0.001 : quantity;
-            
-            if (isMeat) {
-                totalMeat += totalWeight;
-            } else {
-                totalBread += totalWeight;
-            }
-        }
-    });
-
-    displayQuantities({
-        'totalBread': totalBread,
-        'totalMeat': totalMeat
-    });
+    // Chamar a função displayQuantities passando os resultados
+    displayQuantities(resultados);
 }
 
 function displayQuantities(quantities) {
@@ -37,4 +21,35 @@ function displayQuantities(quantities) {
         listItem.textContent = `${quantities[item].toFixed(2)}g de ${item}`;
         quantitiesList.appendChild(listItem);
     }
+}
+
+function calcularIngredientes(quantity, burgerWeight, fatPercentage) {
+    // Calcula o total de carne e gordura
+    const totalCarneEGordura = quantity * burgerWeight;
+    
+    // Calcula a quantidade de carne necessária
+    const quantidadeCarne = totalCarneEGordura * ((100 - fatPercentage) / 100);
+
+    // Calcula a quantidade de gordura necessária
+    const quantidadeGordura = totalCarneEGordura * (fatPercentage/ 100);
+
+    // Retorna os resultados
+    return {
+        quantidadeCarne,
+        quantidadeGordura,
+        totalCarneEGordura
+    };
+}
+
+function listarIngredientes() {
+    const checkboxes = document.querySelectorAll('input[name="ingredient"]:checked');
+    const ingredientList = document.getElementById('ingredient-list');
+
+    ingredientList.innerHTML = ""; // Limpar a lista antes de adicionar os novos ingredientes
+
+    checkboxes.forEach(checkbox => {
+        const listItem = document.createElement('li');
+        listItem.textContent = checkbox.value;
+        ingredientList.appendChild(listItem);
+    });
 }
