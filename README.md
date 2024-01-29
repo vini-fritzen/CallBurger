@@ -4,7 +4,7 @@ Bem-vindo à Calculadora de Hambúrguer! Esta calculadora simples permite que vo
 
 ## Como Usar
 
-1. Abra a [Calculadora de Hambúrguer](https://vini-fritzen.github.io/CallBurger/) no seu navegador.
+1. Abra a [Calculadora de Hambúrguer](https://vini-fritzen.github.io/CallBurger/){:target="_blank"} no seu navegador.
 2. Preencha o número de pessoas e o peso desejado para cada hambúrguer.
 3. Selecione os ingredientes desejados nas seções de legumes, queijos e extras.
 4. Clique no botão "Calcular" para obter as quantidades específicas de cada ingrediente.
